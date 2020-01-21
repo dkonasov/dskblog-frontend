@@ -4,7 +4,7 @@ node_js:
 dist: bionic
 addons:
     ssh_known_hosts:
-        - konasov.space
+    - konasov.space
 sudo: false
 before_install:
 - eval "$(ssh-agent -s)"
@@ -15,7 +15,7 @@ before_install:
   -in .travis/id_rsa.enc -out .travis/id_rsa -d
 deploy:
     - provider: script
-        skip_cleanup: true
-        script: ".travis/deploy.sh"
-        on:
+      skip_cleanup: true
+      script: ".travis/deploy.sh"
+      on:
         branch: master
