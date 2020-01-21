@@ -8,7 +8,7 @@ addons:
 sudo: false
 before_install:
 - openssl aes-256-cbc -K $encrypted_ec161a670f94_key -iv $encrypted_ec161a670f94_iv
-  -in .travis/id_rsa.enc -out .travis/id_rsa -d
+  -in .travis/deploy_rsa.enc -out .travis/id_rsa -d
 - eval "$(ssh-agent -s)"
 - cp .travis/id_rsa ~/.ssh/deploy_rsa
 - chmod 600 ~/.ssh/deploy_rsa
