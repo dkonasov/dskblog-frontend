@@ -5,6 +5,12 @@ dist: bionic
 addons:
     ssh_known_hosts:
     - konasov.space
+    apt:
+        sources:
+            - google-chrome
+        packages:
+            - google-chrome-stable
+    
 sudo: false
 before_install:
 - openssl aes-256-cbc -K $encrypted_ec161a670f94_key -iv $encrypted_ec161a670f94_iv
