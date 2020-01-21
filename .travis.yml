@@ -5,11 +5,7 @@ dist: bionic
 addons:
     ssh_known_hosts:
     - konasov.space
-    apt:
-        sources:
-            - google-chrome
-        packages:
-            - google-chrome-stable
+    chrome: stable
     
 sudo: false
 before_install:
